@@ -1,0 +1,68 @@
+<div class="row mt-3">
+    <div class="h1">เพิ่มหนังสือ</div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div class="container">
+        <form [formGroup]="bookForm">
+          <div class="mb-3 row">
+            <label for="namebook" class="col-sm-3 col-form-label">รหัสหนังสือ</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="ใส่รหัสหนังสือ" formControlName="book_Id">
+            </div>
+          </div>
+
+
+          
+          <div class="mb-3 row">
+            <label for="namebook" class="col-sm-3 col-form-label">ชื่อหนังสือ</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="ใส่ชื่อหนังสือ" formControlName="name">
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="namebook" class="col-sm-3 col-form-label">ชื่อผู้แต่ง</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="ใส่ชื่อผู้แต่ง" formControlName="author">
+            </div>
+          </div>
+          
+          <div class="mb-3 row">
+            <label for="namebook" class="col-sm-3 col-form-label">สำนักพิมพ์</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="สำนักพิมพ์" formControlName="publisher">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="namebook" class="col-sm-3 col-form-label">ราคา</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="ราคา" formControlName="price">
+            </div>
+          </div>
+          <!-- <div class="mb-3 row">
+            
+            <div class="col-sm-9">
+              <input type="hidden" class="form-control"  value="7" formControlName="std">
+            </div>
+          </div>
+          <div class="mb-3 row">
+          
+            <div class="col-sm-9">
+              <input type="hidden" class="form-control"  value="120" formControlName="teacher">
+            </div>
+          </div> -->
+          
+          <div class="mb-3 row">
+            <div class="offset-sm-3 col-sm-10">
+              <button type="submit" class="btn btn-primary" (click)="addBook()">
+                Save
+              </button>
+            </div>
+          </div>
+
+      </form>
+      </div>
+    </div>
+  </div>
+  

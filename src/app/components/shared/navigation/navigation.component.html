@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">LibraryShop</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/">Home <span class="visually-hidden">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item" >
+                    <a class="nav-link" routerLink="/product">Product</a>
+                </li> -->
+                <li class="nav-item" *ngIf="!isLoggedIn">
+                    <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">เมนูหลัก</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" routerLink="/">ข้อมูลสมาชิก</a>
+                        <a class="dropdown-item" routerLink="/book">ข้อมูลหนังสือ</a>
+                        <a class="dropdown-item" routerLink="/">ข้อมูลเจ้าหน้าที่</a>
+                        <a class="dropdown-item" routerLink="/book/borrow">ข้อมูลการยืมหนังสือ</a>
+                        <a class="dropdown-item" routerLink="/">ข้อมูลการคืนหนังสือ</a>
+                        <a class="dropdown-item" routerLink="/book">ค้นหาข้อมูลหนังสือ</a>
+                        <!-- <a class="dropdown-item" routerLink="/">ออกจากระบบ</a> -->
+                        <a class="dropdown-item" routerLink="/" (click)="logout()">ออกจากระบบ</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown" *ngIf="isLoggedIn">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">{{ currentUser.name }}</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" routerLink="/profile">Profile</a>
+                        <a class="dropdown-item" routerLink="/" (click)="logout()">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

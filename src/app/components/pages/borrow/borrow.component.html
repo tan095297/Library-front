@@ -1,0 +1,56 @@
+<div class="row mt-3">
+    <div class="h1">ข้อมูลการยืมหนังสือ</div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div class="container">
+        <form [formGroup]="borrowForm">
+
+
+          <div class="mb-3 row">
+            <label for="namebook" class="col-sm-3 col-form-label">รหัสนักศึกษา</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="รหัสนักศึกษา" formControlName="borrower">
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="namebook" class="col-sm-3 col-form-label">รหัสหนังสือ</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="รหัสหนังสือ" formControlName="book">
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="namebook" class="col-sm-3 col-form-label">วันที่ยืม</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="วันที่ยืม" formControlName="dateborrow">
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="namebook" class="col-sm-3 col-form-label">วันที่ครบกำหนดคืน</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="วันที่ครบกำหนดคืน" formControlName="limit">
+            </div>
+            
+          </div>
+            <div class="mb-3 row">
+                <label for="namebook" class="col-sm-3 col-form-label">รหัสผู้ให้ยืม</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="รหัสผู้ให้ยืม" formControlName="lender">
+                </div>
+            </div>
+          <div class="mb-3 row">
+            <div class="offset-sm-3 col-sm-10">
+              <button type="submit" class="btn btn-primary" (click)="addBorrow()">
+                Save
+              </button>
+            </div>
+          </div>
+          
+          </form>
+      </div>
+    </div>
+  </div>
+  
